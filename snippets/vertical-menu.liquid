@@ -13,7 +13,7 @@
         <ul class="vertical-menu_submenu">
           {% for link in linklists[link.handle].links %}
             {% if linklists[link.handle] == empty %}
-              <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+              <li><a href="{{ link.url }}" class="{% if link.title contains 'Artisan' or link.title contains 'Initiative' %} menu-padding-social {% endif %}">{{ link.title }}</a></li>
             {% else %}
             <li class="sublink"><a data-no-instant href="{{ link.url }}" class="{% if link.url == '#' %}url-deadlink{% endif %}">{{ link.title }} <span class="right icon-down-arrow"></span></a>
               <ul class="vertical-menu_sub-submenu">
