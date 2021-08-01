@@ -21,7 +21,9 @@
             {% else %}
             <li class="sublink">
               <a data-no-instant href="{{ link.url }}" class="{% if link.url == '#' %}url-deadlink{% endif %}">{{ link.title }} 
-                <span class="right icon-down-arrow"></span>
+                {% comment %} no down arrows on links {% endcomment %} {% comment %} 
+                <span class="icon-down-arrow"></span>
+                {% endcomment %} 
               </a>
               <ul class="vertical-menu_sub-submenu">
                 {% for link in linklists[link.handle].links %}
